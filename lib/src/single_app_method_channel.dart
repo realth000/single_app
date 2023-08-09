@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-
-import 'single_app_platform_interface.dart';
+import 'package:single_app/src/single_app_platform_interface.dart';
 
 /// An implementation of [SingleAppPlatform] that uses method channels.
 class MethodChannelSingleApp extends SingleAppPlatform {
@@ -11,7 +10,8 @@ class MethodChannelSingleApp extends SingleAppPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 }

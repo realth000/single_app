@@ -1,6 +1,5 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'single_app_method_channel.dart';
+import 'package:single_app/src/single_app_method_channel.dart';
 
 abstract class SingleAppPlatform extends PlatformInterface {
   /// Constructs a SingleAppPlatform.
